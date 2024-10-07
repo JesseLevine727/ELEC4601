@@ -1,0 +1,34 @@
+ while (1)
+  {
+    /* USER CODE END WHILE */
+
+//Jesse Levine 101185127
+//Gurshan Riarh 101182603
+	//Part 1
+		 	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5); //Pin PA5 controls the on board LED --> every 500ms it will turn on and off
+		 	  HAL_Delay(500);
+
+	//Part 2
+		 	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+		 	  HAL_Delay(500);
+		 	  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_0); //External LED connected to pin PC0
+		 	  HAL_Delay(500); 			// on-board LED and external LED will alternate ON every 500ms
+
+	//Part 3 - Sequentially blinking 3 LEDs in order then reverse order
+		 	  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_0);
+		 	  HAL_Delay(500);
+		 	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_10);
+		 	  HAL_Delay(500);
+			  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+			
+                          HAL_Delay(500);
+		
+			  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_5);
+		 	  HAL_Delay(500);
+		 	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_10);
+		 	  HAL_Delay(500);
+			  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_0);
+	                  
+
+    /* USER CODE BEGIN 3 */
+  }
